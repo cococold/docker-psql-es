@@ -1,0 +1,12 @@
+version: '2'
+services:
+  # username admin password root
+  postgres:
+    build: .
+    image: postgres_es:dev
+    environment:
+      - POSTGRES_DB=survive
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=root
+    ports:
+      - "5432:5432"
